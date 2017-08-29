@@ -839,6 +839,9 @@ Sema::CheckBuiltinFunctionCall(FunctionDecl *FDecl, unsigned BuiltinID,
   case Builtin::BI__builtin_isinf_sign:
   case Builtin::BI__builtin_isnan:
   case Builtin::BI__builtin_isnormal:
+  case Builtin::BI__builtin_signbit:
+  case Builtin::BI__builtin_signbitf:
+  case Builtin::BI__builtin_signbitl:
     if (SemaBuiltinFPClassification(TheCall, 1))
       return ExprError();
     break;
